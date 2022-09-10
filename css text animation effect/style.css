@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+
+h2{
+    position: relative;
+    color: #222;
+    font-size: 6em;
+}
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 350px;
+    overflow: hidden;
+    border-right: 4px white solid;
+    white-space: nowrap;
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px #fff);
+}
+
+@keyframes animate {
+    0%, 10% , 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}
