@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #111;
+    overflow: hidden;
+}
+
+span{
+    position: absolute;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    border-radius: 50%;
+}
+span::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    animation: moveParicles 2s linear infinite;
+}
+
+@keyframes moveParicles {
+    0%{
+        transform: translate(0);
+    }
+
+    100%{
+        transform: translate(500px);
+    }
+}
